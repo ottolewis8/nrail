@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.root.fragment.FragmentMyTickets">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button33">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/aMyTicketsTicketsBorderIMG"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/container_border"
+                app:layout_constraintBottom_toTopOf="@+id/aMyTicketsExpiredTicketsBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/aMyTicketsTabsLL"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsTicketTypeIMG">
+
+                <Button
+                    android:id="@+id/aMyTicketsOutboundTabBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fake_tab_button_focused_left_my_tickets"
+                    android:text="Outbound"
+                    android:textColor="@color/colourTextDark" />
+
+                <Button
+                    android:id="@+id/aMyTicketsReturnTabBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/fake_tab_button_nfocused_my_tickets"
+                    android:text="Return"
+                    android:textColor="@color/colourTextLight" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Duration:"
+                android:textColor="@color/colourTextDarkMid"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/aMyTicketsRtnTimeTXT"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsRtnTimeTXT" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:text="Changes:"
+                android:textColor="@color/colourTextDarkMid"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/aMyTicketsDurationTXT"
+                app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+            <View
+                android:id="@+id/aMyTicketsFirstDIV"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsViewTicketsBTN" />
+
+            <TextView
+                android:id="@+id/aMyTicketsOutNameTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/place_holder"
+                android:textColor="@color/colourTextDark"
+                app:layout_constraintStart_toEndOf="@+id/aMyTicketsOutTimeTXT"
+                app:layout_constraintTop_toTopOf="@+id/aMyTicketsOutTimeTXT" />
+
+            <View
+                android:id="@+id/aMyTicketsSecondDIV"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsViewJourneyBTN" />
+
+            <ImageView
+                android:id="@+id/aMyTicketsTicketTypeIMG"
+                android:layout_width="117px"
+                android:layout_height="119px"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ticket_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/section_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintTop_creator="1" />
+
+            <TextView
+                android:id="@+id/aMyTicketsDestinationNameTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/place_holder"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/aMyTicketsTicketTypeIMG"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/aMyTicketsBookingRefValueTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="2383043871"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/aMyTicketsBookingRefNameTXT"
+                app:layout_constraintTop_toTopOf="@+id/aMyTicketsBookingRefNameTXT" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/aMyTicketsOutTimeTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/place_holder"
+                android:textColor="@color/colourTextDark"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/aMyTicketsTravelDateTXT"
+                app:layout_constraintTop_toTopOf="@+id/aMyTicketsPathIMG" />
+
+            <TextView
+                android:id="@+id/aMyTicketsActiveTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Your tickets are active"
+                android:textColor="@color/colourTextDarkMid"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/aMyTicketsViewTicketsBTN"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsTabsLL" />
+
+            <TextView
+                android:id="@+id/aMyTicketsTravelDateTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/place_holder"
+                app:layout_constraintStart_toEndOf="@+id/aMyTicketsLeftArrowIMG"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsFirstDIV" />
+
+            <ImageView
+                android:id="@+id/aMyTicketsLeftArrowIMG"
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/left_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMyTicketsTravelDateTXT" />
+
+            <TextView
+                android:id="@+id/aMyTicketsDurationTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="##"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+            <Button
+                android:id="@+id/aMyTicketsViewTicketsBTN"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/view_ticket_btn"
+                android:text="View Tickets"
+                android:textColor="@color/colourTabFocused"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsActiveTXT" />
+
+            <TextView
+                android:id="@+id/aMyTicketsBookingRefNameTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:text="Booking Ref #"
+                android:textColor="@color/colourTextDarkMid"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/aMyTicketsSecondDIV"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsSecondDIV" />
+
+            <Button
+                android:id="@+id/aMyTicketsViewJourneyBTN"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/view_journey_btn"
+                android:text="View journey details"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/aMyTicketsRtnNameTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/place_holder"
+                android:textColor="@color/colourTextDark"
+                app:layout_constraintStart_toStartOf="@+id/aMyTicketsOutNameTXT"
+                app:layout_constraintTop_toTopOf="@+id/aMyTicketsRtnTimeTXT" />
+
+            <ImageView
+                android:id="@+id/aMyTicketsPathIMG"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/path_station"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsLeftArrowIMG" />
+
+            <Button
+                android:id="@+id/aMyTicketsExpiredTicketsBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/view_journey_btn"
+                android:text="Expired Tickets"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsBookingRefNameTXT" />
+
+            <TextView
+                android:id="@+id/aMyTicketsRtnTimeTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/place_holder"
+                android:textColor="@color/colourTextDark"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/aMyTicketsPathIMG"
+                app:layout_constraintStart_toStartOf="@+id/aMyTicketsOutTimeTXT" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/aMyTicketsExpiredTicketsBTN"
+                tools:layout_editor_absoluteX="39dp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

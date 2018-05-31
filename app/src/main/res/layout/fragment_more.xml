@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.root.fragment.FragmentMore">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aMoreDebug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/aMoreBodyBtmIMG"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+
+            android:src="@mipmap/body_more_bottom"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aMoreBodyTopIMG" />
+
+        <ImageView
+            android:id="@+id/aMoreBodyTopIMG"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+
+            android:src="@mipmap/body_more_top"
+            android:visibility="invisible" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/aMoreCustomCL"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/aMoreCustomDelBTN"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="Del"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMoreCustomFileET" />
+
+            <EditText
+                android:id="@+id/aMoreCustomPriceRtnET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="£00.00"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/aMoreCustomRtnArriveTimeET"
+                app:layout_constraintTop_toTopOf="@+id/aMorePriceTXT2" />
+
+            <Button
+                android:id="@+id/aMoreCustomNewBTN"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="New"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/aMoreCustomDelBTN"
+                app:layout_constraintTop_toTopOf="@+id/aMoreCustomFileET" />
+
+            <EditText
+                android:id="@+id/aMoreCustomFileET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="@string/place_holder"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/aMoreCustomFileSP"
+                app:layout_constraintStart_toStartOf="@+id/aMoreCustomFileSP"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/aMoreCustomEditBTN"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:text="Edit"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/aMoreCustomNewBTN"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/aMoreCustomRtnArriveTimeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="00:00"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/aMoreCustomRtnDepartTimeET"
+                app:layout_constraintTop_toTopOf="@+id/aMoreRtnArriveTimeTXT" />
+
+            <EditText
+                android:id="@+id/aMoreCustomRtnDepartTimeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="00:00"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/aMoreCustomRtnNameET"
+                app:layout_constraintTop_toTopOf="@+id/aMoreRtnDepartTimeTXT" />
+
+            <TextView
+                android:id="@+id/aMoreRtnArriveTimeTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="Rtn Arrive Time"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomRtnDepartTimeET" />
+
+            <TextView
+                android:id="@+id/aMorePriceTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Price"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@+id/aMoreOutArriveTimeTXT"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomOutArriveTimeET" />
+
+            <TextView
+                android:id="@+id/aMorePriceTXT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Price"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@+id/aMoreRtnArriveTimeTXT"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomRtnArriveTimeET" />
+
+            <EditText
+                android:id="@+id/aMoreCustomOutArriveTimeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="00:00"
+                app:layout_constraintEnd_toEndOf="@+id/aMoreCustomOutDepartTimeET"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMoreOutArriveTimeTXT" />
+
+            <EditText
+                android:id="@+id/aMoreCustomPriceOutET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="£00.00"
+                app:layout_constraintEnd_toEndOf="@+id/aMoreCustomOutDepartTimeET"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/aMoreCustomOutArriveTimeET"
+                app:layout_constraintTop_toTopOf="@+id/aMorePriceTXT" />
+
+            <TextView
+                android:id="@+id/aMoreRtnStationTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Rtn Station"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="@+id/aMoreOutStationTXT" />
+
+            <TextView
+                android:id="@+id/aMoreRtnDepartTimeTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Rtn Depart Time"
+                android:textSize="8sp"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="@+id/aMoreOutDepartTimeTXT" />
+
+            <TextView
+                android:id="@+id/aMoreOutDepartTimeTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Out Depart Time"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/aMoreOutArriveTimeTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Out Arrive Time"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomOutDepartTimeET" />
+
+            <EditText
+                android:id="@+id/aMoreCustomRtnNameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="@+id/aMoreRtnStationTXT" />
+
+            <EditText
+                android:id="@+id/aMoreCustomOutNameET"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="Name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMoreOutStationTXT" />
+
+            <EditText
+                android:id="@+id/aMoreCustomOutDepartTimeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="true"
+                android:text="00:00"
+                app:layout_constraintEnd_toEndOf="@+id/aMoreCustomOutNameET"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMoreOutDepartTimeTXT" />
+
+            <TextView
+                android:id="@+id/aMoreOutStationTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="Out Station"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomEditBTN" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/aMoreCustomApplyBTN"
+                app:layout_constraintStart_toEndOf="@+id/aMoreCustomOutNameET"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomEditBTN" />
+
+            <Spinner
+                android:id="@+id/aMoreRtnSelectSP"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMoreOutSelectSP" />
+
+            <Button
+                android:id="@+id/aMoreCustomApplyBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Apply"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomPriceOutET" />
+
+            <Spinner
+                android:id="@+id/aMoreCustomFileSP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/aMoreCustomEditBTN"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/aMoreCustomEditBTN" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/aMoreRtnSelectSP"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreRtnSelectSP">
+
+                <Button
+                    android:id="@+id/aMoreRtnNewBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="New"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="204dp"
+                    tools:layout_editor_absoluteY="143dp" />
+
+                <Button
+                    android:id="@+id/aMoreRtnDelBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Del"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="248dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <Button
+                    android:id="@+id/aMoreRtnSavBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/aMoreOutSelectSP"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomOutNameET" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="@+id/aMoreOutSelectSP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreOutSelectSP">
+
+                <Button
+                    android:id="@+id/aMoreOutNewBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="New"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="204dp"
+                    tools:layout_editor_absoluteY="143dp" />
+
+                <Button
+                    android:id="@+id/aMoreOutDelBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Del"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="248dp"
+                    tools:layout_editor_absoluteY="183dp" />
+
+                <Button
+                    android:id="@+id/aMoreOutSavBTN"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/aMoreAppVersionTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/place_holder"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aMoreCustomApplyBTN" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/remIMG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aMoreCustomCL">
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+

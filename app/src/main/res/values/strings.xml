@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NorthenRailway</string>
+    <string name="btn_barcode">Barcode</string>
+    <string name="btn_ticket">Ticket</string>
+    <string name="place_holder">#######</string>
+
+    <string name="title_activity_home">Train Tickets</string>
+    <string name="tab_text_0">Home</string>
+    <string name="tab_text_1">Plan &#38; Buy</string>
+    <string name="tab_text_2">Live Times</string>
+    <string name="tab_text_3">My Tickets</string>
+    <string name="tab_text_4">More</string>
+    <string name="action_settings">Settings</string>
+</resources>

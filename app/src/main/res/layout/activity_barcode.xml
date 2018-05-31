@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityBarcode">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/aBarcodeMainCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/aBarcodeTopCL"
+                android:layout_width="0dp"
+                android:layout_height="115dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/aBarcodeArriveNameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_holder"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/aBarcodeArriveTimeTxt"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeDepartNameTxt"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeArriveTimeTxt" />
+
+                <TextView
+                    android:id="@+id/aBarcodeDepartTimeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/place_holder"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/aBarcodeTicketTypeImg"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeTicketTypeImg" />
+
+                <TextView
+                    android:id="@+id/aBarcodeDepartNameTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/place_holder"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/aBarcodeArriveTimeTxt"
+                    app:layout_constraintStart_toEndOf="@+id/aBarcodeDepartTimeTxt"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeDepartTimeTxt" />
+
+                <TextView
+                    android:id="@+id/aBarcodeArriveTimeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_holder"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeDepartTimeTxt"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeDepartTimeTxt" />
+
+                <Button
+                    android:id="@+id/aBarcodeTicketBtn"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="180dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="72dp"
+                    android:background="@drawable/fake_tab_button_focused_left"
+                    android:text="@string/btn_barcode"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/aBarcodeBarcodeBtn"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/fake_tab_button_nfocused"
+                    android:text="@string/btn_ticket"
+                    android:textColor="@color/colourTextLight"
+                    app:layout_constraintBottom_toBottomOf="@+id/aBarcodeTicketBtn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/aBarcodeTicketBtn"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeTicketBtn" />
+
+                <ImageView
+                    android:id="@+id/aBarcodeTicketTypeImg"
+                    android:layout_width="117px"
+                    android:layout_height="119px"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ticket_type" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/aBarcodeMidCL"
+                android:layout_width="0dp"
+                android:layout_height="288dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aBarcodeTopCL">
+
+                <ImageView
+                    android:id="@+id/aBarcodeTabBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/white_box" />
+
+                <ImageView
+                    android:id="@+id/aBarcodeTicketBtnShape"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="230dp"
+                    android:paddingBottom="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/aBarcodeTicketTopShape"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeTicketTopShape"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeTicketTopTxt"
+                    app:srcCompat="@drawable/ticket_btm_shape" />
+
+                <ImageView
+                    android:id="@+id/aBarcodeTicketLogoImg"
+                    android:layout_width="23dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/aBarcodeTicketBtnShape"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeTicketBtnShape"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeTicketBtnShape"
+                    app:srcCompat="@drawable/ticket_bottom_logo" />
+
+                <ImageView
+                    android:id="@+id/aBarcodeTicketTopShape"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ticket_top_shape" />
+
+                <TextView
+                    android:id="@+id/aBarcodeTicketTopTxt"
+                    style="@style/TicketTextTop"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:text="Activated: 6 June 2018 07:10"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/aBarcodeTicketTopShape"
+                    app:layout_constraintEnd_toEndOf="@+id/aBarcodeTicketTopShape"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeTicketTopShape"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeTicketTopShape" />
+
+                <ImageView
+                    android:id="@+id/aBarcodeQRImg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/aBarcodeTicketBtnShape"
+                    app:layout_constraintEnd_toEndOf="@+id/aBarcodeTabBackground"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeTabBackground"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeTicketTopTxt"
+                    app:srcCompat="@drawable/ticket_qr" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/aBarcodeBtmCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.331"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aBarcodeMidCL">
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmNameTxt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="Purchased:"
+                    android:textColor="@color/colourTextLight"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmNameTxt1"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeBtmNameTxt4" />
+
+                <TextView
+                    android:id="@+id/aBarcodeActiveTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Tickets active"
+                    android:textColor="@color/colourTextActive"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmHeadingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Itinerary Details"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeActiveTxt" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmNameTxt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Ticket type:"
+                    android:textColor="@color/colourTextLight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeBtmHeadingTxt" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmNameTxt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Passengers:"
+                    android:textColor="@color/colourTextLight"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmNameTxt1"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeBtmNameTxt1" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmNameTxt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total price:"
+                    android:textColor="@color/colourTextLight"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmNameTxt1"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeBtmNameTxt2" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmNameTxt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction ID:"
+                    android:textColor="@color/colourTextLight"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmNameTxt1"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeBtmNameTxt3" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmValueTxt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:text="Anytime Day Return"
+                    app:layout_constraintStart_toEndOf="@+id/aBarcodeBtmNameTxt1"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeBtmNameTxt1" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmValueTxt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Adult"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmValueTxt1"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeBtmNameTxt2" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmValueTxt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_holder"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmValueTxt1"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeBtmNameTxt3" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmValueTxt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2383043871"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmValueTxt1"
+                    app:layout_constraintTop_toBottomOf="@+id/aBarcodeBtmValueTxt3" />
+
+                <TextView
+                    android:id="@+id/aBarcodeBtmValueTxt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/place_holder"
+                    app:layout_constraintStart_toStartOf="@+id/aBarcodeBtmValueTxt1"
+                    app:layout_constraintTop_toTopOf="@+id/aBarcodeBtmNameTxt5" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
