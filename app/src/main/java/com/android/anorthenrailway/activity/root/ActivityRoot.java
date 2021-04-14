@@ -2,6 +2,7 @@ package com.android.anorthenrailway.activity.root;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -18,6 +19,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 import com.android.anorthenrailway.ActivityBarcode;
 import com.android.anorthenrailway.ActivityTickets;
@@ -56,8 +61,16 @@ public class ActivityRoot extends AppCompatActivity {
     public static AppCompatActivity rootOwner = null;
 
     @Override
+    public void onResume () {
+        super.onResume();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setSoftInputMode( // Stops keyboard showing on resume
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN
+        );
         rootOwner = this;
         requestPermissions();
         setContentView(R.layout.activity_root);
