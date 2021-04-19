@@ -32,6 +32,12 @@ public class ActivityBarcode extends AppCompatActivity {
     }*/
 
     @Override
+    public void onResume () {
+        super.onResume();
+        setup();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 

@@ -57,6 +57,7 @@ public class ActivityTickets extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+        setup();
         try {
             timerUI = new Timer();
             updateUITask = new UpdateMovingTime();

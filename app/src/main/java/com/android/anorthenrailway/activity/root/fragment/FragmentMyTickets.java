@@ -18,6 +18,7 @@ import com.android.anorthenrailway.TicketInformation;
 import com.android.anorthenrailway.TicketJourney;
 import com.android.anorthenrailway.activity.ActivityEnum;
 import com.android.anorthenrailway.activity.root.ActivityRoot;
+import com.android.anorthenrailway.activity.root.RootTabEnum;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -37,6 +38,12 @@ public class FragmentMyTickets extends Fragment {
 
     public FragmentMyTickets() {
         init();
+    }
+
+    @Override
+    public void onResume () {
+        super.onResume();
+        updateUI();
     }
 
     private void init() {

@@ -59,10 +59,14 @@ public class ActivityRoot extends AppCompatActivity {
     private FragmentPlanBuy fragmentPlanBuy;
     private FragmentLive fragmentLive;
     public static AppCompatActivity rootOwner = null;
+    private static RootTabEnum activeFragment;
 
     @Override
     public void onResume () {
         super.onResume();
+        if (activeFragment == RootTabEnum.TAB_MY_TICKETS) {
+            fragmentMyTickets.onResume();
+        }
     }
 
     @Override
@@ -104,18 +108,23 @@ public class ActivityRoot extends AppCompatActivity {
         switch (RootTabEnum.valueOf(index)) {
             case TAB_HOME:
                 fragmentHome = new FragmentHome();
+                activeFragment = RootTabEnum.TAB_HOME;
                 break;
             case TAB_PLAN_BUY:
                 fragmentPlanBuy = new FragmentPlanBuy();
+                activeFragment = RootTabEnum.TAB_PLAN_BUY;
                 break;
             case TAB_LIVE:
                 fragmentLive = new FragmentLive();
+                activeFragment = RootTabEnum.TAB_LIVE;
                 break;
             case TAB_MY_TICKETS:
                 fragmentMyTickets = new FragmentMyTickets();
+                activeFragment = RootTabEnum.TAB_MY_TICKETS;
                 break;
             case TAB_MORE:
                 fragmentMore = new FragmentMore();
+                activeFragment = RootTabEnum.TAB_MORE;
                 break;
         }
     }
